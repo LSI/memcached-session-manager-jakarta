@@ -51,8 +51,8 @@ import java.util.logging.LogManager;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.servlet.http.HttpSessionActivationListener;
-import javax.servlet.http.HttpSessionEvent;
+import jakarta.servlet.http.HttpSessionActivationListener;
+import jakarta.servlet.http.HttpSessionEvent;
 
 import de.javakaffee.web.msm.storage.MemcachedStorageClient;
 import de.javakaffee.web.msm.storage.StorageClient;

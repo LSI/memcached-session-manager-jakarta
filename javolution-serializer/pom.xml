@@ -2,38 +2,38 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>de.javakaffee.msm</groupId>
-		<artifactId>memcached-session-manager-project</artifactId>
-		<version>2.1.2-SNAPSHOT</version>
+		<artifactId>memcached-session-manager-project-jakarta</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
 	<groupId>de.javakaffee.msm</groupId>
 	<artifactId>msm-javolution-serializer</artifactId>
-	<name>memcached-session-manager javolution-serializer</name>
-	<version>2.1.2-SNAPSHOT</version>
+	<name>memcached-session-manager-jakarta javolution-serializer</name>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>de.javakaffee.msm</groupId>
-			<artifactId>memcached-session-manager</artifactId>
+			<artifactId>memcached-session-manager-jakarta</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
-			<artifactId>juli</artifactId>
+			<artifactId>tomcat-juli</artifactId>
 			<version>${tomcat-version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
-			<artifactId>coyote</artifactId>
+			<artifactId>tomcat-coyote</artifactId>
 			<version>${tomcat-version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
-			<artifactId>catalina</artifactId>
+			<artifactId>tomcat-catalina</artifactId>
 			<version>${tomcat-version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -72,14 +72,14 @@
 		<!-- see http://maven.apache.org/guides/mini/guide-attached-tests.htmlf -->
 		<dependency>
 			<groupId>de.javakaffee.msm</groupId>
-			<artifactId>memcached-session-manager</artifactId>
+			<artifactId>memcached-session-manager-jakarta</artifactId>
 			<version>${project.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>
 		</dependency>
         <dependency>
             <groupId>de.javakaffee.msm</groupId>
-            <artifactId>memcached-session-manager-tc7</artifactId>
+            <artifactId>memcached-session-manager-tc10</artifactId>
             <version>${project.version}</version>
             <scope>test</scope>
         </dependency>

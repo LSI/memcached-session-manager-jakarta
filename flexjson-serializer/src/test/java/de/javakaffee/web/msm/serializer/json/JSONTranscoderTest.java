@@ -38,7 +38,7 @@ public class JSONTranscoderTest {
 	@Test
     public void testReadValueIntoObject() throws Exception {
 		final MemcachedBackupSessionManager manager = new MemcachedBackupSessionManager();
-		manager.setContainer( new StandardContext() );
+		//manager.setContainer( new StandardContext() );
 		final JSONTranscoder transcoder = new JSONTranscoder(manager);
 
 		final MemcachedBackupSession session = manager.createEmptySession();

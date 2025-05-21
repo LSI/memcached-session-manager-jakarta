@@ -30,7 +30,7 @@ import org.apache.juli.logging.LogFactory;
  * determine if a provided sessionId is valid when parsing the request.
  * <p>
  * The stored information contains the maxInactiveInterval (might be session specific),
- * lastAccessedTime (used by tomcat7 with STRICT_SERVLET_COMPLIANCE/LAST_ACCESS_AT_START) and
+ * lastAccessedTime (used by tomcat10 with STRICT_SERVLET_COMPLIANCE/LAST_ACCESS_AT_START) and
  * thisAccessedTime.
  * </p>
  *

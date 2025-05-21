@@ -44,7 +44,7 @@
 				</plugin>
 				<plugin>
 					<groupId>org.apache.tomcat.maven</groupId>
-					<artifactId>tomcat7-maven-plugin</artifactId>
+					<artifactId>tomcat10-maven-plugin</artifactId>
 					<version>2.2</version>
 					<dependencies>
 						<dependency>
@@ -167,7 +167,7 @@
 				</property> </properties> </configuration> </execution> </executions> </plugin -->
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
+				<artifactId>tomcat10-maven-plugin</artifactId>
 				<configuration>
 					<!-- http port -->
 					<port>${tomcat.port}</port>
@@ -175,7 +175,7 @@
 					<path>/</path>
 					<backgroundProcessorDelay>10</backgroundProcessorDelay>
 					<tomcatLoggingFile>../src/main/resources/logging.properties</tomcatLoggingFile>
-					<!-- When run with `mvn tomcat7:run -pl :simpleservlet -am` 
+					<!-- When run with `mvn tomcat10:run -pl :simpleservlet -am`
 						the plugin is run in the submodule's directory, so we must walk up to the 
 						(this) parent project -->
 					<contextFile>../src/main/resources/context.xml</contextFile>

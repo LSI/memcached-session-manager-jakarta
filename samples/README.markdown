@@ -20,7 +20,7 @@ Before running the samples you should start 2 memcached instances:
 
 Then you can run a tomcat with a sample webapp via maven, e.g. with the simpleservlet sample app:
 
-    $ mvn tomcat7:run -pl :simpleservlet -am
+    $ mvn tomcat10:run -pl :simpleservlet -am
 
 Tomcat + webapp is then available at http://localhost:9090.
 
@@ -28,7 +28,7 @@ Tomcat + webapp is then available at http://localhost:9090.
 
 To run another tomcat on a different port (e.g. 9091) you can set the `tomcat.port` system property:
 
-    $ mvn tomcat7:run -pl :simpleservlet -am -Dtomcat.port=9091
+    $ mvn tomcat10:run -pl :simpleservlet -am -Dtomcat.port=9091
 
 The `context.xml` file uses some properties that can be set via these system properties:
 
@@ -44,11 +44,11 @@ There are several predefined maven profiles:
 
 To activate the non-sticky profile it's also necessary to overwrite the msm.failoverNodes:
 
-    $ mvn tomcat7:run -pl :simpleservlet -am -Pnon-sticky -Dmsm.failoverNodes=" "
+    $ mvn tomcat10:run -pl :simpleservlet -am -Pnon-sticky -Dmsm.failoverNodes=" "
 
 To increase the log level specify an appropriate logging properties, like this one:
 
-    $ mvn tomcat7:run -pl :simpleservlet -am -Djava.util.logging.config.file=src/main/resources/logging.properties
+    $ mvn tomcat10:run -pl :simpleservlet -am -Djava.util.logging.config.file=src/main/resources/logging.properties
 
 ### Build & run nginx in Docker
 

@@ -14,3 +14,5 @@ jbossweb3/
 .idea
 *.log
 
+*.DS_Store
+

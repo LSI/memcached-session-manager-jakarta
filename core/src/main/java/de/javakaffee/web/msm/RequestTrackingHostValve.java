@@ -24,8 +24,8 @@ import java.util.regex.Pattern;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Request;
@@ -176,7 +176,7 @@ public abstract class RequestTrackingHostValve extends ValveBase {
         if ( cookies == null ) {
             return;
         }
-        for( final javax.servlet.http.Cookie cookie : cookies ) {
+        for( final jakarta.servlet.http.Cookie cookie : cookies ) {
             if ( cookie.getName().equals( _sessionCookieName ) ) {
                 _log.debug( "Have request session cookie: domain=" + cookie.getDomain() + ", maxAge=" + cookie.getMaxAge() +
                         ", path=" + cookie.getPath() + ", value=" + cookie.getValue() +

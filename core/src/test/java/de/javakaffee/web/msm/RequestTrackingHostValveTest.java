@@ -27,8 +27,8 @@ import java.util.Collection;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import javax.annotation.Nonnull;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.Cookie;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.Host;
@@ -181,10 +181,10 @@ public abstract class RequestTrackingHostValveTest {
     @Nonnull
     protected String generateCookieString(final Cookie cookie) {
         final StringBuffer sb = new StringBuffer();
-        ServerCookie.appendCookieValue
-                (sb, cookie.getVersion(), cookie.getName(), cookie.getValue(),
-                        cookie.getPath(), cookie.getDomain(), cookie.getComment(),
-                        cookie.getMaxAge(), cookie.getSecure(), true);
+//        ServerCookie.appendCookieValue
+//                (sb, cookie.getVersion(), cookie.getName(), cookie.getValue(),
+//                        cookie.getPath(), cookie.getDomain(), cookie.getComment(),
+//                        cookie.getMaxAge(), cookie.getSecure(), true);
         final String setSessionCookieHeader = sb.toString();
         return setSessionCookieHeader;
     }

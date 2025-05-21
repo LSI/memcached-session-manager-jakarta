@@ -31,7 +31,7 @@ import java.security.Principal;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
@@ -75,7 +75,7 @@ public abstract class TranscoderServiceTest {
         when( _manager.getContext() ).thenReturn( context ); // needed for createSession
         // Manager.getContainer no longer available in tc 8.5+
         if(_managerHasGetContainer) {
-            when( _manager.getContainer() ).thenReturn( context );
+            //when( _manager.getContainer() ).thenReturn( context );
         }
         when( _manager.newMemcachedBackupSession() ).thenAnswer(new Answer<MemcachedBackupSession>() {
             @Override
@@ -108,12 +108,12 @@ public abstract class TranscoderServiceTest {
         final MemcachedBackupSession session = (MemcachedBackupSession) _manager.createSession( null );
 
         final Principal saved = createPrincipal();
-        session.setNote(Constants.FORM_PRINCIPAL_NOTE, saved);
+        session.setNote(Constants.FORM_USERNAME, saved);
 
         final byte[] data = TranscoderService.serializeSessionFields( session );
         final MemcachedBackupSession deserialized = TranscoderService.deserializeSessionFields(data, _manager ).getSession();
 
-        final Principal actual = (Principal) deserialized.getNote(Constants.FORM_PRINCIPAL_NOTE);
+        final Principal actual = (Principal) deserialized.getNote(Constants.FORM_USERNAME);
         assertNotNull(actual);
         assertDeepEquals(actual, saved);
     }

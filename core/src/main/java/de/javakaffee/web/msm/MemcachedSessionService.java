@@ -307,7 +307,7 @@ public class MemcachedSessionService {
          * removing it from memcached.
          *
          * @param session   Session to be removed
-         * @param update    Should the expiration statistics be updated (since tomcat7)
+         * @param update    Should the expiration statistics be updated (since tomcat10)
          */
         void removeInternal( final Session session, final boolean update );
 

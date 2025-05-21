@@ -19,7 +19,7 @@ package de.javakaffee.web.msm;
 import java.io.IOException;
 
 import javax.annotation.Nonnull;
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 import org.apache.catalina.connector.Request;
 import org.apache.catalina.connector.Response;

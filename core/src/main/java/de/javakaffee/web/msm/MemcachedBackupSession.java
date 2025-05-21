@@ -646,7 +646,7 @@ public class MemcachedBackupSession extends StandardSession {
      * @return <code>true</code> if authentication details have changed.
      */
     boolean authenticationChanged() {
-        return _authenticationChanged || getNote(Constants.FORM_PRINCIPAL_NOTE) != null;
+        return _authenticationChanged || getNote(Constants.FORM_USERNAME) != null;
     }
 
     /**

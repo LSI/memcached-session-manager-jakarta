@@ -41,7 +41,7 @@ public class XStreamTranscoderTest {
     @Test
     public void testReadValueIntoObject() throws Exception {
         final MemcachedBackupSessionManager manager = new MemcachedBackupSessionManager();
-        manager.setContainer( new StandardContext() );
+        //manager.setContainer( new StandardContext() );
         final XStreamTranscoder transcoder = new XStreamTranscoder( manager );
 
         final MemcachedBackupSession session = manager.createEmptySession();

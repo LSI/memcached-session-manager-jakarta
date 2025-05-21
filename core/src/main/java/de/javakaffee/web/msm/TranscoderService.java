@@ -36,7 +36,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentMap;
 
-import javax.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletRequest;
 
 import org.apache.catalina.Session;
 import org.apache.catalina.authenticator.Constants;
@@ -200,7 +200,7 @@ public class TranscoderService {
         final byte[] savedRequestData = serializeSavedRequest(session.getNote(Constants.FORM_REQUEST_NOTE));
         final int savedRequestDataLength = savedRequestData != null ? savedRequestData.length : 0;
 
-        final byte[] savedPrincipalData = serializePrincipal((Principal) session.getNote(Constants.FORM_PRINCIPAL_NOTE), session.getManager());
+        final byte[] savedPrincipalData = serializePrincipal((Principal) session.getNote(Constants.FORM_USERNAME), session.getManager());
         final int savedPrincipalDataLength = savedPrincipalData != null ? savedPrincipalData.length : 0;
 
         int sessionFieldsDataLength = 2 // short value for the version
@@ -296,7 +296,7 @@ public class TranscoderService {
             if ( savedPrincipalDataLength > 0 ) {
                 final byte[] savedPrincipalData = new byte[savedPrincipalDataLength];
                 System.arraycopy( data, currentIdx + 2, savedPrincipalData, 0, savedPrincipalDataLength );
-                result.setNote( Constants.FORM_PRINCIPAL_NOTE, deserializePrincipal( savedPrincipalData, manager ) );
+                result.setNote( Constants.FORM_USERNAME, deserializePrincipal( savedPrincipalData, manager ) );
             }
         }
 

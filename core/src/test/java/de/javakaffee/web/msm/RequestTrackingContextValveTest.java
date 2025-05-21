@@ -26,7 +26,7 @@ import static org.testng.Assert.assertEquals;
 import java.io.IOException;
 
 import javax.annotation.Nonnull;
-import javax.servlet.ServletException;
+import jakarta.servlet.ServletException;
 
 import org.apache.catalina.Valve;
 import org.apache.catalina.connector.Request;

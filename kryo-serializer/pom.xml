@@ -2,19 +2,19 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>de.javakaffee.msm</groupId>
-		<artifactId>memcached-session-manager-project</artifactId>
-		<version>2.3.3-SNAPSHOT</version>
+		<artifactId>memcached-session-manager-project-jakarta</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>msm-kryo-serializer</artifactId>
-	<name>memcached-session-manager kryo-serializer</name>
-	<version>2.3.3-SNAPSHOT</version>
+	<name>memcached-session-manager-jakarta kryo-serializer</name>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>de.javakaffee.msm</groupId>
-			<artifactId>memcached-session-manager</artifactId>
+			<artifactId>memcached-session-manager-jakarta</artifactId>
 			<version>${project.version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -30,19 +30,19 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
-			<artifactId>juli</artifactId>
+			<artifactId>tomcat-juli</artifactId>
 			<version>${tomcat-version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
-			<artifactId>coyote</artifactId>
+			<artifactId>tomcat-coyote</artifactId>
 			<version>${tomcat-version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
-			<artifactId>catalina</artifactId>
+			<artifactId>tomcat-catalina</artifactId>
 			<version>${tomcat-version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -118,7 +118,7 @@
 		<!-- see http://maven.apache.org/guides/mini/guide-attached-tests.htmlf -->
 		<dependency>
 			<groupId>de.javakaffee.msm</groupId>
-			<artifactId>memcached-session-manager</artifactId>
+			<artifactId>memcached-session-manager-jakarta</artifactId>
 			<version>${project.version}</version>
 			<type>test-jar</type>
 			<scope>test</scope>

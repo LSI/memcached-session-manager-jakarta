@@ -327,7 +327,7 @@ public abstract class MemcachedSessionServiceTest {
         _service.backupSession( session.getIdInternal(), false, "foo" ).get();
 
         final String oldSessionId = session.getId();
-        _service.getManager().changeSessionId( session );
+        _service.getManager().rotateSessionId( session );
 
         // on session backup we specify sessionIdChanged as false as we're not aware of this fact
         _service.backupSession( session.getIdInternal(), false, "foo" );
