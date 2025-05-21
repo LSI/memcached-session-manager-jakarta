@@ -7,7 +7,7 @@
 `memcached-session-manager-jakarta` is a tomcat session manager forked from [memcache-sesson-manager](https://github.com/magro/memcached-session-manageri) that keeps sessions in memcached or Redis, for highly available, scalable and fault tolerant web applications.
 
 This version has been updated to support the jakarta servlet API and is not backward compatible with Tomcat 9 or older.
-j
+
 It supports both sticky and non-sticky configurations.
 
 For sticky sessions session failover (tomcat crash) is supported, for non-sticky sessions this is the default (a session is served by default by different tomcats for different requests).
