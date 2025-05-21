@@ -1,12 +1,16 @@
-# memcached session manager
+# memcached session manager jakarta
 
 [![Join the chat at https://gitter.im/memcached-session-manager/Lobby](https://badges.gitter.im/memcached-session-manager/Lobby.svg)](https://gitter.im/memcached-session-manager/Lobby)
 [![Build Status](https://travis-ci.org/magro/memcached-session-manager.svg?branch=master)](https://travis-ci.org/magro/memcached-session-manager)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.javakaffee.msm/memcached-session-manager/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.javakaffee.msm%22)
 
-memcached-session-manager is a tomcat session manager that keeps sessions in memcached or Redis, for highly available, scalable and fault tolerant web applications.
-It supports both sticky and non-sticky configurations, and is currently working with tomcat 6.x, 7.x, 8.x and 9.x. For sticky sessions session failover (tomcat crash)
-is supported, for non-sticky sessions this is the default (a session is served by default by different tomcats for different requests).
+`memcached-session-manager-jakarta` is a tomcat session manager forked from [memcache-sesson-manager](https://github.com/magro/memcached-session-manageri) that keeps sessions in memcached or Redis, for highly available, scalable and fault tolerant web applications.
+
+This version has been updated to support the jakarta servlet API and is not backward compatible with Tomcat 9 or older.
+j
+It supports both sticky and non-sticky configurations.
+
+For sticky sessions session failover (tomcat crash) is supported, for non-sticky sessions this is the default (a session is served by default by different tomcats for different requests).
 Also memcached failover (memcached crash) is supported via migration of sessions. There shall also be no single point of failure, so when a memcached fails
 the session will not be lost (but either be available in tomcat or in another memcached).
 
