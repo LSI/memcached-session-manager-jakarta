@@ -1,12 +1,11 @@
 # memcached session manager jakarta
 
-[![Join the chat at https://gitter.im/memcached-session-manager/Lobby](https://badges.gitter.im/memcached-session-manager/Lobby.svg)](https://gitter.im/memcached-session-manager/Lobby)
-[![Build Status](https://travis-ci.org/magro/memcached-session-manager.svg?branch=master)](https://travis-ci.org/magro/memcached-session-manager)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.javakaffee.msm/memcached-session-manager/badge.svg)](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22de.javakaffee.msm%22)
+`memcached-session-manager-jakarta` is a tomcat session manager forked from [memcache-sesson-manager](https://github.com/magro/memcached-session-manager) that keeps sessions in memcached or Redis, for highly available, scalable and fault tolerant web applications.
 
-`memcached-session-manager-jakarta` is a tomcat session manager forked from [memcache-sesson-manager](https://github.com/magro/memcached-session-manageri) that keeps sessions in memcached or Redis, for highly available, scalable and fault tolerant web applications.
+This version has been updated to support the jakarta servlet API and is NOT BACKWARD COMPATIBLE with Tomcat 9 or older.
 
-This version has been updated to support the jakarta servlet API and is not backward compatible with Tomcat 9 or older.
+Unit tests have not been updated and do not currently work. The rest of the claimed functionality in the original readme below may or may not function. It's working so far with my use case.
+I may clean it up further on my own time but it's not what work's paying me for currently.
 
 It supports both sticky and non-sticky configurations.
 
